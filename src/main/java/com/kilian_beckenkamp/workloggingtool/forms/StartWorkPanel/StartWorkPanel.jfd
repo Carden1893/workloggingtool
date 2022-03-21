@@ -1,0 +1,46 @@
+JFDML JFormDesigner: "7.0.5.2.410" Java: "11.0.10" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {space :::p, par l {comp label1:::p:391:p, par t:l::p {seq l {space :p:6:p, comp label2:::p:191:p, space :::x, comp frequencyField:::p:105:p}, seq l {comp startButton:::p:130:p, space u:::p, comp cancelButton::::0:x}, comp button1::l:::x}}}}"
+			"$verticalGroup": "par l {seq l {space :::p, comp label1:::p:51:p, space u:::p, par b {comp label2::b:p:25:p, comp frequencyField::b:p::p}, space u:::p, par t {comp startButton:::p::p, comp cancelButton:::p:30:p}, space :::p, comp button1:::p::p, space :::x}}"
+		} ) {
+			name: "this"
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": " Worklogger V1"
+				"font": new com.jformdesigner.model.SwingDerivedFont( null, 0, 7, false )
+				"horizontalAlignment": 2
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label2"
+				"text": "Asking Frequency in minutes"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "frequencyField"
+				"text": "15"
+				"horizontalAlignment": 4
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "startButton"
+				"text": "Start working"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "start", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "cancelButton"
+				"text": "Stop Working & Close"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "cancel", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button1"
+				"text": "Show Worklog"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "showWorklog", true ) )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 325, 180 )
+		} )
+	}
+}

@@ -1,0 +1,42 @@
+JFDML JFormDesigner: "7.0.5.2.410" Java: "11.0.10" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {space ::12:x, par l {par l:t {comp label2:::p:391:p, seq {comp logButton:::p:187:p, space :::p, comp cancelOnceButton:::p:199:p}, comp workDescription:::p:387:p}, comp label1::t:p:391:p}, space :::p}}"
+			"$verticalGroup": "par l {seq l {space :::p, comp label1:::p:51:p, space :::p, comp label2:::p::p, space u:::p, comp workDescription:::p:88:p, space :::p, par b {comp cancelOnceButton::b:p::p, comp logButton::b:p::p}, space :::x}}"
+		} ) {
+			name: "this"
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": "Worklogger V1"
+				"font": new com.jformdesigner.model.SwingDerivedFont( null, 0, 7, false )
+				"horizontalAlignment": 2
+			} )
+			add( new FormComponent( "javax.swing.JTextArea" ) {
+				name: "workDescription"
+				"lineWrap": true
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label2"
+				"text": "What did you work on in the last period?"
+				"font": new com.jformdesigner.model.SwingDerivedFont( null, 0, 5, false )
+				"horizontalAlignment": 2
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "logButton"
+				"text": "Log described work"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "log", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "cancelOnceButton"
+				"text": "Cancel once"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "cancelOnce", true ) )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 5, 0 )
+			"size": new java.awt.Dimension( 410, 225 )
+		} )
+	}
+}

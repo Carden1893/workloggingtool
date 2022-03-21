@@ -1,0 +1,36 @@
+JFDML JFormDesigner: "7.0.5.2.410" Java: "11.0.10" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq l {space :::p, par l {seq {comp label2:::p:104:p, space :::p, comp comboBox1:::p:227:p, space ::62:x}, seq {par l {comp label1:::p:390:p, comp scrollPane1::::0:x}, space ::9:x}}}}"
+			"$verticalGroup": "par l {seq l {space :::p, comp label1:::p:34:p, space :::p, par l {comp label2:::p:26:p, comp comboBox1:::p::p}, space u:::p, comp scrollPane1:::p:387:p, space :::x}}"
+		} ) {
+			name: "this"
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPane1"
+				add( new FormComponent( "javax.swing.JTable" ) {
+					name: "table1"
+					"rowSelectionAllowed": false
+					"gridColor": new java.awt.Color( 0, 0, 0, 255 )
+				} )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": "Worklog"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label2"
+				"text": "show Log from:"
+			} )
+			add( new FormComponent( "javax.swing.JComboBox" ) {
+				name: "comboBox1"
+				addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "comboBox1ItemStateChanged", true ) )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 405, 370 )
+		} )
+	}
+}
